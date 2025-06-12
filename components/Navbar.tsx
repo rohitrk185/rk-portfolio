@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/24/solid";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -52,9 +51,9 @@ function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
       className="flex text-white p-4 items-center h-16 justify-center w-full px-2 md:px-6 lg:px-8 border-b-[0.5px] border-gray-500 bg-black bg-opacity-5 backdrop-blur bg-blend-darken"
     >
       <div className="flex items-center justify-center">
-        <Link legacyBehavior href="/">
-          <a className="flex items-center justify-center">
-            <Image
+        <Link href="/">
+          <span className="flex items-center justify-center">
+            <img
               src="/logo.png"
               alt="Logo"
               width={40}
@@ -65,35 +64,35 @@ function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
               Home
             </span>
             <HomeIcon className="inline-block lg:hidden h-6 w-6 text-white ml-3 transition-transform ease-in-out duration-200 hover:scale-150 hover:text-blue-500" />
-          </a>
+          </span>
         </Link>
       </div>
       <div className="hidden md:flex items-center justify-center flex-1 md:pl-0 lg:pl-10 xl:pl-24">
         <div className="flex justify-end">
-          <Link legacyBehavior href="/resume">
-            <a className="text-white mx-4 text-lg hover:text-2xl transition-fontSize duration-200 ease-in-out hover:text-blue-500 text-center">
+          <Link href="/resume">
+            <span className="text-white mx-4 text-lg hover:text-2xl transition-fontSize duration-200 ease-in-out hover:text-blue-500 text-center">
               Resume
-            </a>
+            </span>
           </Link>
-          <Link legacyBehavior href="/education">
-            <a className="text-white mx-4 text-lg hover:text-2xl transition-fontSize duration-200 ease-in-out hover:text-blue-500 text-center">
+          <Link href="/education">
+            <span className="text-white mx-4 text-lg hover:text-2xl transition-fontSize duration-200 ease-in-out hover:text-blue-500 text-center">
               Education
-            </a>
+            </span>
           </Link>
-          <Link legacyBehavior href="/skills">
-            <a className="text-white mx-4 text-lg hover:text-2xl transition-fontSize duration-200 ease-in-out hover:text-blue-500 text-center">
+          <Link href="/skills">
+            <span className="text-white mx-4 text-lg hover:text-2xl transition-fontSize duration-200 ease-in-out hover:text-blue-500 text-center">
               Skills
-            </a>
+            </span>
           </Link>
-          <Link legacyBehavior href="/experience">
-            <a className="text-white mx-4 text-lg hover:text-2xl transition-fontSize duration-200 ease-in-out hover:text-blue-500 text-center">
+          <Link href="/experience">
+            <span className="text-white mx-4 text-lg hover:text-2xl transition-fontSize duration-200 ease-in-out hover:text-blue-500 text-center">
               Experience
-            </a>
+            </span>
           </Link>
-          <Link legacyBehavior href="/projects">
-            <a className="text-white mx-4 text-lg hover:text-2xl transition-fontSize duration-200 ease-in-out hover:text-blue-500 text-center">
+          <Link href="/projects">
+            <span className="text-white mx-4 text-lg hover:text-2xl transition-fontSize duration-200 ease-in-out hover:text-blue-500 text-center">
               Projects
-            </a>
+            </span>
           </Link>
         </div>
       </div>
@@ -116,7 +115,7 @@ function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
         </a>
       </div>
       <div className="hidden md:block items-center">
-        <Link legacyBehavior href="/contact">
+        <Link href="/contact">
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-auto hover:text-xl transition-fontSize ease-in-out duration-200">
             Contact Me
           </button>

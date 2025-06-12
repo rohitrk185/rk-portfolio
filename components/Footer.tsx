@@ -10,13 +10,10 @@ function Footer() {
     >
       <div className="max-w-2xl mx-auto">
         <p className="text-center text-sm sm:text-base">
-          <Link
-            legacyBehavior
-            href="https://github.com/Kevin-Kwan/portfolio-nextjs"
-          >
-            <a className="text-blue-300 hover:underline transition-colors ease-in-out hover:text-blue-500">
+          <Link href="https://github.com/Kevin-Kwan/portfolio-nextjs">
+            <span className="text-blue-300 hover:underline transition-colors ease-in-out hover:text-blue-500">
               Made by Rohit Kumar R
-            </a>
+            </span>
           </Link>{" "}
           using{" "}
           <a

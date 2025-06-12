@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 type MenuProps = {
   isMenuOpen: boolean;
@@ -11,12 +11,12 @@ type MenuProps = {
 function NavbarMenu({ isMenuOpen, toggleMenu }: MenuProps) {
   const router = useRouter();
   useEffect(() => {
-    router.prefetch('/resume');
-    router.prefetch('/education');
-    router.prefetch('/skills');
-    router.prefetch('/experience');
-    router.prefetch('/projects');
-    router.prefetch('/contact');
+    router.prefetch("/resume");
+    router.prefetch("/education");
+    router.prefetch("/skills");
+    router.prefetch("/experience");
+    router.prefetch("/projects");
+    router.prefetch("/contact");
   }, [router]);
   // useEffect(() => {
   //   // If the menu is being opened, prevent scrolling. Otherwise, allow it.
@@ -24,16 +24,16 @@ function NavbarMenu({ isMenuOpen, toggleMenu }: MenuProps) {
   // }, [isMenuOpen]);
   return (
     <motion.div
-      style={{ zIndex: 5, backgroundColor: '#171F29', paddingTop: '64px' }}
+      style={{ zIndex: 5, backgroundColor: "#171F29", paddingTop: "64px" }}
       className={`${
-        isMenuOpen ? 'block' : 'hidden'
+        isMenuOpen ? "block" : "hidden"
       } fixed text-white w-full flex justify-center text-center md:hidden`}
-      initial={{ y: '-100vh' }}
-      animate={{ y: isMenuOpen ? '0' : '-100vh' }}
+      initial={{ y: "-100vh" }}
+      animate={{ y: isMenuOpen ? "0" : "-100vh" }}
       transition={{ duration: 0.3 }}
     >
       <div className="text-xl flex flex-col items-center justify-center w-full">
-        {/* <Link legacyBehavior href="/about">
+        {/* <Link href="/about">
           <button
             type="button"
             className="text-white block py-2 px-4 hover:bg-gray-700 duration-200 hover:text-blue-500"
@@ -42,7 +42,7 @@ function NavbarMenu({ isMenuOpen, toggleMenu }: MenuProps) {
             About Me
           </button>
         </Link> */}
-        <Link legacyBehavior href={process.env.NEXT_PUBLIC_RESUME_LINK || '#'}>
+        <Link href={process.env.NEXT_PUBLIC_RESUME_LINK || "#"}>
           <button
             type="button"
             className="text-lg md:text-xl w-full text-white block py-2 px-4 hover:bg-gray-700 ease-in-out duration-200 hover:text-blue-500"
@@ -51,7 +51,7 @@ function NavbarMenu({ isMenuOpen, toggleMenu }: MenuProps) {
             Résumé
           </button>
         </Link>
-        <Link legacyBehavior href="/education">
+        <Link href="/education">
           <button
             type="button"
             className="text-lg md:text-xl w-full text-white block py-2 px-4 hover:bg-gray-700 ease-in-out duration-200 hover:text-blue-500"
@@ -60,7 +60,7 @@ function NavbarMenu({ isMenuOpen, toggleMenu }: MenuProps) {
             Education
           </button>
         </Link>
-        <Link legacyBehavior href="/skills">
+        <Link href="/skills">
           <button
             type="button"
             className="text-lg md:text-xl w-full text-white block py-2 px-4 hover:bg-gray-700 ease-in-out duration-200 hover:text-blue-500"
@@ -69,7 +69,7 @@ function NavbarMenu({ isMenuOpen, toggleMenu }: MenuProps) {
             Skills
           </button>
         </Link>
-        <Link legacyBehavior href="/experience">
+        <Link href="/experience">
           <button
             type="button"
             className="text-lg md:text-xl w-full text-white block py-2 px-4 hover:bg-gray-700 ease-in-out duration-200 hover:text-blue-500"
@@ -78,7 +78,7 @@ function NavbarMenu({ isMenuOpen, toggleMenu }: MenuProps) {
             Experience
           </button>
         </Link>
-        <Link legacyBehavior href="/projects">
+        <Link href="/projects">
           <button
             type="button"
             className="text-lg md:text-xl w-full text-white block py-2 px-4 hover:bg-gray-700 ease-in-out duration-200 hover:text-blue-500"
@@ -87,7 +87,7 @@ function NavbarMenu({ isMenuOpen, toggleMenu }: MenuProps) {
             Projects
           </button>
         </Link>
-        <Link legacyBehavior href="/contact">
+        <Link href="/contact">
           <div className="pb-3">
             <button className="text-lg md:text-xl bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ease-in-out duration-200 ">
               Contact Me

@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
-import { FaGithub, FaGlobe } from 'react-icons/fa';
-import { Fade } from 'react-awesome-reveal';
+import React from "react";
+import Link from "next/link";
+import { FaGithub, FaGlobe } from "react-icons/fa";
+import { Fade } from "react-awesome-reveal";
 
 interface ProjectCardProps {
   name: string;
@@ -17,7 +17,7 @@ function ProjectCard({
   description,
   githubLink,
   demoLink,
-  demoText = 'Demo',
+  demoText = "Demo",
   Icon = FaGlobe,
 }: ProjectCardProps) {
   const DefaultIcon = Icon || FaGlobe;
