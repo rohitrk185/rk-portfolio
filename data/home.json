@@ -1,0 +1,20 @@
+{
+  "name": "Rohit Kumar R",
+  "taglines": [
+    "JavaScript/TypeScript, Python, C++ Full-Stack Software Engineer.",
+    "Interests/Passions include Web/Application Development, Reverse Engineering, and Scalable System Design.",
+    "Always in pursuit of creating impactful and purposeful works 🚀"
+  ],
+  "socialLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/rohitrk185",
+      "icon": "FaGithub"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/rohit-kumar-r-425b0521b/",
+      "icon": "FaLinkedin"
+    }
+  ]
+}
