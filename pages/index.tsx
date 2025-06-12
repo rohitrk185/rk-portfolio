@@ -5,10 +5,12 @@ import { loadFull } from "tsparticles";
 import Head from "next/head";
 import homeData from "../data/home.json"; // Assuming you created data/home.json
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import AnimatedName from "../components/AnimatedName";
 
 function Home() {
   const [init, setInit] = useState(false);
 
+  // State for the animated name
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadFull(engine);
@@ -539,6 +541,7 @@ function Home() {
     FaLinkedin,
   };
 
+  // Reset animation if homeData.name changes (though unlikely for static JSON)
   // useEffect(() => {
   //   console.log(homeData);
   // }, []);
@@ -575,7 +578,7 @@ function Home() {
               </div> */}
               <p
                 className={
-                  "gradientText text-5xl sm:text-7xl md:text-8xl font-bold mt-4 text-center  sm:hover:text-8xl md:hover:text-9xl transition-all ease-in-out duration-200"
+                  "gradientText text-5xl sm:text-7xl md:text-8xl font-bold mt-4 text-center transition-all ease-in-out duration-200"
                 }
                 style={{
                   // fontFamily: 'Lato, sans-serif',
@@ -584,21 +587,29 @@ function Home() {
                   fontWeight: 900,
                 }}
               >
-                {homeData.name}
+                <span className="text-4xl sm:text-6xl md:text-7xl">
+                  Hey, I'm{" "}
+                </span>
+                {/* Animated Name */}
+                <AnimatedName name={homeData.name} />
               </p>
 
-              {homeData.taglines.map((tagline, index) => (
-                <p
-                  key={index}
-                  className={
-                    "shadowText text-sm sm:text-base md:text-lg mt-2 text-center transition-all ease-in-out duration-200 text-white"
-                  }
-                >
-                  {tagline}
-                </p>
-              ))}
+              {/* Glass box for taglines */}
+              <div className="mt-6 mx-auto p-4 sm:p-6 bg-white/10 backdrop-blur-[6px] rounded-xl shadow-lg border border-white/20 max-w-max">
+                {homeData.taglines.map((tagline, index) => (
+                  <p
+                    key={index}
+                    className={
+                      "shadowText text-sm sm:text-base md:text-lg text-center text-white " +
+                      (index < homeData.taglines.length - 1 ? "mb-2" : "") // Add margin bottom to all but the last tagline
+                    }
+                  >
+                    {tagline}
+                  </p>
+                ))}
+              </div>
 
-              <div className="flex justify-center mt-4 space-x-2 sm:space-x-4 md:space-x-4">
+              <div className="flex justify-center mt-8 space-x-2 sm:space-x-4 md:space-x-8">
                 {homeData.socialLinks.map((social) => {
                   const IconComponent = socialIcons[social.icon];
                   return (

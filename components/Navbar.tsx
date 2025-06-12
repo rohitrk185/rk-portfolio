@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import Image from 'next/image';
-import { HomeIcon } from '@heroicons/react/24/solid';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { RxCross1 } from 'react-icons/rx';
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import Image from "next/image";
+import { HomeIcon } from "@heroicons/react/24/solid";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross1 } from "react-icons/rx";
 
 interface NavbarProps {
   fixed?: boolean;
@@ -16,12 +16,12 @@ interface NavbarProps {
 function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
   const router = useRouter();
   useEffect(() => {
-    router.prefetch('/resume');
-    router.prefetch('/education');
-    router.prefetch('/skills');
-    router.prefetch('/experience');
-    router.prefetch('/projects');
-    router.prefetch('/contact');
+    router.prefetch("/resume");
+    router.prefetch("/education");
+    router.prefetch("/skills");
+    router.prefetch("/experience");
+    router.prefetch("/projects");
+    router.prefetch("/contact");
   }, [router]);
 
   useEffect(
@@ -32,10 +32,10 @@ function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
         }
       };
 
-      window.addEventListener('resize', handleResize);
+      window.addEventListener("resize", handleResize);
 
       return function () {
-        window.removeEventListener('resize', handleResize);
+        window.removeEventListener("resize", handleResize);
       };
     },
     [isMenuOpen, toggleMenu]
@@ -44,12 +44,12 @@ function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
     <nav
       style={{
         zIndex: 10,
-        position: fixed ? 'fixed' : 'relative',
-        top: fixed ? 0 : 'auto',
-        width: fixed ? '100%' : 'auto',
-        background: 'linear-gradient(to right, #3F4C6B, #171F29, #3F4C6B)',
+        position: fixed ? "fixed" : "relative",
+        top: fixed ? 0 : "auto",
+        width: fixed ? "100%" : "auto",
+        // background: "linear-gradient(to right, #171F29, #171F29, #171F29)",
       }}
-      className="flex text-white p-4 items-center h-16 justify-center w-full px-2 md:px-6 lg:px-8"
+      className="flex text-white p-4 items-center h-16 justify-center w-full px-2 md:px-6 lg:px-8 border-b-[0.5px] border-gray-500 bg-black bg-opacity-5 backdrop-blur bg-blend-darken"
     >
       <div className="flex items-center justify-center">
         <Link legacyBehavior href="/">
@@ -59,7 +59,7 @@ function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
               alt="Logo"
               width={40}
               height={40}
-              className="mr-2 transform transition-transform duration-200 ease-in-out hover:scale-125 hover:rotate-[15deg]"
+              className="mr-2 transform transition-transform duration-200 ease-in-out hover:scale-125 hover:rotate-[15deg] rounded-lg"
             />
             <span className="hidden lg:inline-block text-white font-bold text-lg ml-3 hover:text-2xl transition-fontSize duration-200 ease-in-out hover:text-blue-500">
               Home
@@ -72,7 +72,7 @@ function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
         <div className="flex justify-end">
           <Link legacyBehavior href="/resume">
             <a className="text-white mx-4 text-lg hover:text-2xl transition-fontSize duration-200 ease-in-out hover:text-blue-500 text-center">
-              Résumé
+              Resume
             </a>
           </Link>
           <Link legacyBehavior href="/education">
