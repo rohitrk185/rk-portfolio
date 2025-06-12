@@ -54,7 +54,7 @@ function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
         <Link href="/">
           <span className="flex items-center justify-center">
             <img
-              src="/logo.png"
+              src="/logo.jpg"
               alt="Logo"
               width={40}
               height={40}

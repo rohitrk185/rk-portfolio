@@ -31,7 +31,7 @@ function EducationCard({
 }: EducationCardProps) {
   return (
     <Fade triggerOnce>
-      <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-md p-2 p x-4 md:p-4 md:px-6 mb-4 max-w-6xl mx-auto">
+      <div className="bg-white bg-opacity-[0.09] backdrop-blur-md rounded-xl shadow-md p-2 p x-4 md:p-4 md:px-6 mb-4 max-w-6xl mx-auto">
         <div className="flex items-center">
           <img
             src={logoUrl}
