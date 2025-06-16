@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
 
 interface Link {
@@ -32,7 +31,7 @@ function ExperienceCard({
     <Fade>
       <div className="bg-white bg-opacity-[0.09] backdrop-blur-md rounded-lg shadow-md p-4 mb-4 max-w-6xl mx-auto">
         <div className="flex items-center">
-          <Image
+          <img
             src={logoUrl}
             alt={companyName}
             className="w-20 h-20 rounded-full mr-4 object-contain"
