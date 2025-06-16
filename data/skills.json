@@ -1,0 +1,132 @@
+[
+  {
+    "name": "JavaScript",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png"
+  },
+  {
+    "name": "Python",
+    "href": "https://python.org",
+    "logoUrl": "https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png"
+  },
+  {
+    "name": "C++",
+    "href": "https://isocpp.org/",
+    "logoUrl": "https://logotyp.us/file/c-plus-plus.svg"
+  },
+  {
+    "name": "TypeScript",
+    "href": "https://www.typescriptlang.org/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png"
+  },
+  {
+    "name": "HTML",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    "logoUrl": "/images/HTML5.png"
+  },
+  {
+    "name": "CSS",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/600px-CSS3_logo_and_wordmark.svg.png"
+  },
+  {
+    "name": "Node.js",
+    "href": "https://nodejs.org/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png"
+  },
+  {
+    "name": "Express.js",
+    "href": "https://expressjs.com/",
+    "logoUrl": "https://seekvectors.com/files/download/234b110fb32958f68f318e13c7a0610e.png"
+  },
+  {
+    "name": "React",
+    "href": "https://react.dev/",
+    "logoUrl": "https://admin.mridul.tech/wp-content/uploads/2023/02/react-js.png"
+  },
+  {
+    "name": "Next.js",
+    "href": "https://nextjs.org/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/394px-Nextjs-logo.svg.png"
+  },
+  {
+    "name": "Flask",
+    "href": "https://flask.palletsprojects.com/en/2.2.x/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1280px-Flask_logo.svg.png"
+  },
+  {
+    "name": "FastAPI",
+    "href": "https://fastapi.tiangolo.com/",
+    "logoUrl": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png"
+  },
+  {
+    "name": "Tailwind CSS",
+    "href": "https://tailwindcss.com/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tailwind_CSS_logo.svg/2560px-Tailwind_CSS_logo.svg.png"
+  },
+  {
+    "name": "Docker",
+    "href": "https://www.docker.com/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Docker_%28container_engine%29_logo.svg/2560px-Docker_%28container_engine%29_logo.svg.png"
+  },
+  {
+    "name": "AWS",
+    "href": "https://aws.amazon.com/",
+    "logoUrl": "https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png"
+  },
+  {
+    "name": "Google Cloud Platform",
+    "href": "https://www.google.com/cloud/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Google_Cloud_logo.svg/1280px-Google_Cloud_logo.svg.png"
+  },
+  {
+    "name": "PostgreSQL",
+    "href": "https://www.postgresql.org/",
+    "logoUrl": "https://cdn.iconscout.com/icon/free/png-256/free-postgresql-logo-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-freebies-pack-logos-icons-1175120.png"
+  },
+  {
+    "name": "MySQL",
+    "href": "https://www.mysql.com/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png"
+  },
+  {
+    "name": "MongoDB",
+    "href": "https://www.mongodb.com/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/1280px-MongoDB_Logo.svg.png"
+  },
+  {
+    "name": "Firebase",
+    "href": "https://firebase.google.com/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/New_Firebase_logo.svg/2560px-New_Firebase_logo.svg.png"
+  },
+  {
+    "name": "Git",
+    "href": "https://git-scm.com/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png"
+  },
+  {
+    "name": "GitHub",
+    "href": "https://www.github.com/",
+    "logoUrl": "https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png"
+  },
+  {
+    "name": "Vercel",
+    "href": "https://vercel.com/",
+    "logoUrl": "https://1000logos.net/wp-content/uploads/2024/08/Vercel-Logo.png"
+  },
+  {
+    "name": "Redux",
+    "href": "https://redux.js.org/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Redux_Logo.png/1200px-Redux_Logo.png"
+  },
+  {
+    "name": "Zustand",
+    "href": "https://github.com/pmndrs/zustand",
+    "logoUrl": "https://repository-images.githubusercontent.com/180328715/fca49300-e7f1-11ea-9f51-cfd949b31560"
+  },
+  {
+    "name": "Recoil",
+    "href": "https://recoiljs.org/",
+    "logoUrl": "https://recoiljs.org/img/logo.svg"
+  }
+]

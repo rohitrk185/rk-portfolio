@@ -618,7 +618,7 @@ function Home() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white transition-transform ease-in-out duration-200 hover:scale-115 sm:hover:scale-130 md:hover:scale-150 hover:text-blue-500"
+                      className="text-white transition-transform ease-in-out duration-200 hover:scale-115 sm:hover:scale-130 md:hover:scale-150 hover:text-[#3b82f6]"
                     >
                       {IconComponent && <IconComponent size={36} />}
                     </a>

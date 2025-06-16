@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { useMemo } from "react";
 
 function Footer() {
+  const year = useMemo(() => new Date().getFullYear(), []);
   return (
     <footer
       className="text-white p-2 sm:p-3"
@@ -8,13 +10,14 @@ function Footer() {
         background: "linear-gradient(to right, #171F29, #3F4C6B, #171F29)",
       }}
     >
-      <div className="max-w-2xl mx-auto">
-        <p className="text-center text-sm sm:text-base">
-          <Link href="https://github.com/Kevin-Kwan/portfolio-nextjs">
-            <span className="text-blue-300 hover:underline transition-colors ease-in-out hover:text-blue-500">
-              Made by Rohit Kumar R
-            </span>
-          </Link>{" "}
+      <div className="max-w-2xl mx-auto flex flex-col items-center">
+        <p className="text-neutral-200">&copy; {year}</p>
+
+        <p className="text-center text-sm sm:text-base text-neutral-200">
+          <span className="">Made by</span>{" "}
+          <span className="text-blue-300 hover:underline transition-colors ease-in-out hover:text-blue-500">
+            Rohit Kumar R
+          </span>{" "}
           using{" "}
           <a
             href="https://nextjs.org/"

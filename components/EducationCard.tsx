@@ -12,7 +12,8 @@ interface EducationCardProps {
   credential: string;
   logoUrl: string;
   eduDescription?: React.ReactNode;
-  gpa?: string;
+  gpa?: string | null;
+  percentage?: string | null;
   links: Link[];
   subschoolDescription: string;
   location?: string;
@@ -25,13 +26,14 @@ function EducationCard({
   logoUrl,
   eduDescription,
   gpa,
+  percentage,
   links = [],
   subschoolDescription,
   location = "Atlanta, GA",
 }: EducationCardProps) {
   return (
     <Fade triggerOnce>
-      <div className="bg-white bg-opacity-[0.09] backdrop-blur-md rounded-xl shadow-md p-2 p x-4 md:p-4 md:px-6 mb-4 max-w-6xl mx-auto">
+      <div className="bg-white bg-opacity-[0.09] backdrop-blur-md rounded-xl shadow-md p-2 px-4 md:p-4 md:px-6 lg:p-6 mb-4 max-w-6xl mx-auto">
         <div className="flex items-center">
           <img
             src={logoUrl}
@@ -78,14 +80,24 @@ function EducationCard({
             ))}
           </div>
         </div>
-        <h4 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white">
+        <h4 className="mt-1 text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white">
           {credential}
         </h4>
-        <div className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">
+        <div className="mt-1 text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">
           {eduDescription}
         </div>
-        <div className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">
-          <b> GPA: </b> {gpa}
+        <div className="mt-1 text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">
+          {typeof gpa === "string" ? (
+            <>
+              <b> GPA: </b> {gpa}
+            </>
+          ) : null}
+
+          {typeof percentage === "string" ? (
+            <>
+              <b> Percentage: </b> {percentage}
+            </>
+          ) : null}
         </div>
       </div>
     </Fade>

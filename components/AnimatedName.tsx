@@ -28,7 +28,11 @@ function AnimatedName({
     return () => clearTimeout(timeoutId);
   }, [displayedName, name, typingSpeed, restartDelay]);
 
-  return <span className="transition">{displayedName}</span>;
+  return (
+    <span className="transition bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+      {displayedName}
+    </span>
+  );
 }
 
 export default AnimatedName;

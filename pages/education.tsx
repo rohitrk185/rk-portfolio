@@ -8,17 +8,17 @@ function Education() {
       <Head>
         <title>Rohit Kumar R | My Education</title>
       </Head>
-      <main className="flex-1 p-4" style={{ paddingTop: "5rem" }}>
+      <main className="flex-1 p-4 mb-20" style={{ paddingTop: "5rem" }}>
         <div className="max-w-4xl mx-auto">
-          <p className="sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold mb-2 text-white text-center underline">
+          <p className="sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold mb-2 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent text-center underline">
             My Education
           </p>
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-1xl text-white mb-2 text-center">
+          <p className="mt-3 mb-8 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-1xl text-neutral-200 text-center">
             Here, you&apos;ll find a list of my educational experiences,
             associations, activities/societies, and awards/achievements.
           </p>
 
-          <div className="flex flex-col gap-8 mt-12">
+          <div className="flex flex-col gap-8 mt-4">
             {educationData.map((edu, index) => (
               <EducationCard
                 key={index}
@@ -36,6 +36,7 @@ function Education() {
                   ) : undefined
                 }
                 gpa={edu.gpa}
+                percentage={edu.percentage}
                 location={edu.location || undefined} // Pass location if it exists
               />
             ))}

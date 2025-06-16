@@ -1,0 +1,25 @@
+[
+  {
+    "companyName": "MyLang",
+    "subCompanyDescription": "Tech - Online Media & Audio",
+    "dateRange": "June 2023 - Present",
+    "jobTitle": "Software Developer",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/C560BAQHOVH0zRl3CYA/company-logo_200_200/company-logo_200_200/0/1668584336342/mylang_logo?e=2147483647&v=beta&t=Wc5nrUUhqsOBhdo-yOwU_BhcJlzzjfHwomuysiTH_jY",
+    "jobDescription": "<ul style='list-style-type:disc; margin-left: 1rem;margin-top: .8rem;'><li>Implemented the story creation module of Next.js webapp using WebAudio APIs, enabling 10,000+ users to write and narrate stories, with backend support through Firebase, AWS Lambda, S3, Firebase Cloud Functions and enabled secure transactions via Cash-Free payment gateway integration.</li><li style='margin-top: .5rem;'>Implemented an AI-powered audiobook generation platform, leveraging Python, React.js, Postgresql, Google Cloud to convert books into immersive audiobooks with AI narration, background music, and sound effects. Increased book-to-audio conversion efficiency by 40% and reduced time to market by 90%.</li></ul>",
+    "links": [
+      {
+        "url": "https://www.mylangaudio.in",
+        "displayText": "Company Website"
+      }
+    ]
+  },
+  {
+    "companyName": "MyLang",
+    "subCompanyDescription": "Tech - Online Media & Audio",
+    "dateRange": "January 2023 - June 2023",
+    "jobTitle": "Frontend Developer Intern",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/C560BAQHOVH0zRl3CYA/company-logo_200_200/company-logo_200_200/0/1668584336342/mylang_logo?e=2147483647&v=beta&t=Wc5nrUUhqsOBhdo-yOwU_BhcJlzzjfHwomuysiTH_jY",
+    "jobDescription": "<ul style='list-style-type:disc; margin-left: 1rem;margin-top: .8rem;'><li>Worked on Audio Stories Web App built using Next JS, Firebase, Tailwind CSS. Implemented multilingual support using Next.js i18n, enabling accessibility in English, Hindi, and Kannada, expanding the user base by 30%.</li><li style='margin-top: .5rem;'>Delivered multiple feature enhancements and resolved critical bugs, maintaining high standards of code quality through rigorous testing and peer reviews.</li></ul>",
+    "links": []
+  }
+]

@@ -1,6 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import { Fade } from 'react-awesome-reveal';
+import React from "react";
+import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 
 interface Link {
   url: string;
@@ -26,11 +26,11 @@ function ExperienceCard({
   jobDescription,
   links = [],
   subCompanyDescription,
-  location = 'Atlanta, GA',
+  location = "Atlanta, GA",
 }: ExperienceCardProps) {
   return (
     <Fade triggerOnce>
-      <div className="bg-white rounded-lg shadow-md p-4 mb-4 max-w-6xl mx-auto">
+      <div className="bg-white bg-opacity-[0.09] backdrop-blur-md rounded-lg shadow-md p-4 mb-4 max-w-6xl mx-auto">
         <div className="flex items-center">
           <Image
             src={logoUrl}
@@ -40,24 +40,24 @@ function ExperienceCard({
             height={1000}
           />
           <div>
-            <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-black">
+            <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white">
               {companyName}
               {subCompanyDescription && (
                 <>
-                  {' '}
-                  <span className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
+                  {" "}
+                  <span className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200">
                     |
-                  </span>{' '}
-                  <span className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-500">
+                  </span>{" "}
+                  <span className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">
                     {subCompanyDescription}
                   </span>
                 </>
               )}
             </h3>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300">
               {location}
-            </p>{' '}
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-800">
+            </p>{" "}
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-400">
               {dateRange}
             </p>
             {links.map((link, index) => (
@@ -67,7 +67,7 @@ function ExperienceCard({
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`text-xs sm:text-sm md:text-base lg:text-lg text-blue-500 underline ${
-                    index !== 0 ? 'ml-3' : ''
+                    index !== 0 ? "ml-3" : ""
                   }`}
                 >
                   {link.displayText}
@@ -76,10 +76,10 @@ function ExperienceCard({
             ))}
           </div>
         </div>
-        <h4 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-black">
+        <h4 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-100 my-2">
           {jobTitle}
         </h4>
-        <div className="text-xs sm:text-sm md:text-base text-gray-700">
+        <div className="text-xs sm:text-sm md:text-base text-gray-200">
           {jobDescription}
         </div>
       </div>

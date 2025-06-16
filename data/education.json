@@ -29,7 +29,8 @@
       }
     ],
     "eduDescription": null,
-    "gpa": "8.3 "
+    "gpa": null,
+    "percentage": "83%"
   },
   {
     "schoolName": "The New Cambridge School",
@@ -40,6 +41,7 @@
     "logoUrl": "https://images.jdmagicbox.com/v2/comp/bangalore/65/080p38565/catalogue/the-new-cambridge-english-high-school-vijayanagar-bangalore-english-medium-schools-y1pe967jlz.jpg",
     "links": [],
     "eduDescription": null,
-    "gpa": "9.5"
+    "gpa": null,
+    "percentage": "96%"
   }
 ]
