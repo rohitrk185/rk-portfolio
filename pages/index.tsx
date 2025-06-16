@@ -588,7 +588,7 @@ function Home() {
                 }}
               >
                 <span className="text-4xl sm:text-6xl md:text-7xl">
-                  Hey, I'm{" "}
+                  Hey, I&apos;m{" "}
                 </span>
                 {/* Animated Name */}
                 <AnimatedName name={homeData.name} />
