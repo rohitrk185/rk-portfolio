@@ -1,197 +1,105 @@
-import React, { useRef, useState, useCallback } from "react";
-import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import Head from "next/head";
+import Link from "next/link";
+import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si"; // Assuming you might want a LeetCode icon
 
-import {
-  AiOutlineCheckCircle,
-  AiOutlineCloseCircle,
-  AiOutlineClose,
-} from "react-icons/ai";
-
-interface ContactProps {
-  serviceId: string;
-  templateId: string;
-  publicKey: string;
+// Define a type for contact items for better structure
+interface ContactItem {
+  name: string;
+  href: string;
+  icon: React.ElementType;
+  handle?: string; // Optional: for displaying username/handle
 }
 
-function Contact({ serviceId, templateId, publicKey }: ContactProps) {
-  const form = useRef<HTMLFormElement>(null);
-  const [submitResult, setSubmitResult] = useState<
-    "success" | "failure" | null
-  >(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const closeModal = useCallback(() => {
-    setIsModalOpen(false);
-  }, []);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm();
+function ContactPage() {
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
 
-  async function onSubmit() {
-    if (!serviceId || !templateId || !publicKey || !form.current) {
-      console.error(
-        "EmailJS environment variables or form reference are not defined"
-      );
-      return;
-    }
-
-    try {
-      await emailjs.sendForm(serviceId, templateId, form.current, publicKey);
-      setSubmitResult("success");
-      setIsModalOpen(true);
-      reset();
-    } catch (error) {
-      setSubmitResult("failure");
-      setIsModalOpen(true);
-    }
-  }
+  const contactItems: ContactItem[] = [
+    {
+      name: "Email",
+      href: `mailto:${contactEmail}`,
+      icon: FaEnvelope,
+      handle: contactEmail,
+    },
+    {
+      name: "GitHub",
+      href: "https://github.com/rohitrk185", // Replace with your GitHub profile URL
+      icon: FaGithub,
+      handle: "rohitrk185",
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/rohit-kumar-r-425b0521b", // Replace with your LinkedIn profile URL
+      icon: FaLinkedin,
+      handle: "Rohit Kumar R",
+    },
+    {
+      name: "LeetCode",
+      href: "https://leetcode.com/u/rohitsmudge190/", // Replace with your LeetCode profile URL
+      icon: SiLeetcode,
+      handle: "rohitsmudge190",
+    },
+    {
+      name: "Twitter / X",
+      href: "https://x.com/190R0hit", // Replace with your Twitter/X profile URL
+      icon: FaTwitter,
+      handle: "@190R0hit",
+    },
+  ];
 
   return (
     <div>
       <Head>
-        <title>Rohit Kumar R | Contact Form</title>
+        <title>Rohit Kumar R | Contact Me</title>
+        <meta
+          name="description"
+          content="Contact Rohit Kumar R through various channels including email, GitHub, LinkedIn, LeetCode, and Twitter."
+        />
       </Head>
-      <main className="flex-1 p-4" style={{ paddingTop: "5rem" }}>
-        <div className="max-w-2xl mx-auto">
-          <p className="text-white text-2xl font-bold mb-4 text-center">
-            Feel Free to Contact Me!
+      <main
+        className="flex-1 p-4 min-h-screen flex flex-col items-center justify-center"
+        style={{ paddingTop: "5rem", paddingBottom: "5rem" }}
+      >
+        <div className="max-w-2xl w-full text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+            Get In Touch
+          </h1>
+          <p className="text-neutral-300 text-lg md:text-xl mb-12">
+            I&apos;m always open to discussing new projects, creative ideas, or
+            opportunities to be part of something amazing. Feel free to reach
+            out!
           </p>
-          <p className="text-white mb-4">
-            If you would like to reach out to me, leave feedback, or report a
-            bug on my website, please fill out the form below with your name,
-            email, and a message.
-            <br />
-            You can also directly email me at{" "}
-            {process.env.NEXT_PUBLIC_CONTACT_EMAIL ? (
-              <a
-                href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`}
-                className="text-blue-400 underline"
+
+          <div className="space-y-6">
+            {contactItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                // Changed to flex-col for vertical stacking, items-center for horizontal centering of stacked items
+                className="flex flex-col items-center justify-center p-4 bg-white bg-opacity-[0.07] backdrop-blur-md rounded-lg shadow-lg hover:bg-opacity-[0.15] transition-all duration-300 ease-in-out group"
               >
-                {process.env.NEXT_PUBLIC_CONTACT_EMAIL}
-              </a>
-            ) : (
-              "(Fetching email address...)"
-            )}
-            <a>.</a>
-            <br />
-            <br />
-            I&lsquo;ll get back to you as soon as possible! 😁
-          </p>
-          <form
-            ref={form}
-            onSubmit={handleSubmit(onSubmit)}
-            className="space-y-4"
-          >
-            <input
-              {...register("name", { required: true })}
-              placeholder="Your Name"
-              className="w-full p-2 border border-gray-300 rounded text-black"
-            />
-            {errors.name && (
-              <span className="text-red-500">This field is required.</span>
-            )}
-
-            <input
-              {...register("email", {
-                required: "This field is required.",
-                pattern: {
-                  value:
-                    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                  message: "Please provide a valid email address.",
-                },
-              })}
-              placeholder="Your Email Address"
-              className="w-full p-2 border border-gray-300 rounded text-black"
-            />
-            {errors.email && typeof errors.email.message === "string" && (
-              <span className="text-red-500">{errors.email.message}</span>
-            )}
-
-            <textarea
-              {...register("message", {
-                required: "This field is required.",
-                minLength: {
-                  value: 10,
-                  message: "Your message must be at least 10 characters.",
-                },
-              })}
-              placeholder="Your Message"
-              className="w-full p-2 border border-gray-300 rounded text-black"
-              rows={4}
-            />
-            {errors.message && typeof errors.message.message === "string" && (
-              <span className="text-red-500">{errors.message.message}</span>
-            )}
-
-            <input
-              type="submit"
-              className="w-full p-2 bg-blue-500 text-white rounded cursor-pointer hover:bg-blue-600"
-            />
-          </form>
-        </div>
-      </main>
-      {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div
-            className={`p-8 rounded shadow-lg relative flex items-center justify-center ${
-              submitResult === "success" ? "bg-green-200" : "bg-red-200"
-            }`}
-          >
-            {" "}
-            <button
-              onClick={closeModal}
-              className="absolute top-0 right-0 m-2 text-gray-500 hover:text-gray-700"
-            >
-              <AiOutlineClose size={24} />
-            </button>
-            <div className="">
-              {submitResult === "success" && (
-                <div className="flex flex-col items-center justify-center">
-                  <AiOutlineCheckCircle
-                    className="text-green-500 animate-bounce"
-                    size={50}
-                  />
-                  <p className="text-green-900 text-lg font-bold text-center">
-                    Successfully submitted form!
-                  </p>
+                {/* Icon with margin-bottom for spacing, removed margin-right */}
+                <item.icon className="text-sky-400 group-hover:text-sky-300 text-3xl md:text-4xl mb-2 transition-colors duration-300" />
+                {/* Text content now centered */}
+                <div className="text-center">
+                  <span className="block text-lg md:text-xl font-semibold text-neutral-100 group-hover:text-white transition-colors duration-300 leading-tight">
+                    {item.name}
+                  </span>
+                  {item.handle && (
+                    <span className="block text-sm md:text-base text-neutral-400 group-hover:text-neutral-300 transition-colors duration-300 leading-tight">
+                      {item.handle}
+                    </span>
+                  )}
                 </div>
-              )}
-              {submitResult === "failure" && (
-                <div className="flex flex-col items-center justify-center">
-                  <AiOutlineCloseCircle
-                    className="text-red-500 animate-bounce"
-                    size={50}
-                  />
-                  <p className="text-red-500 text-lg font-bold text-center">
-                    Failed to submit form. Please try again later.
-                  </p>
-                </div>
-              )}
-            </div>
+              </Link>
+            ))}
           </div>
         </div>
-      )}
+      </main>
     </div>
   );
 }
 
-export async function getStaticProps() {
-  const serviceId = process.env.EMAILJS_SERVICE_ID ?? null;
-  const templateId = process.env.EMAILJS_TEMPLATE_ID ?? null;
-  const publicKey = process.env.EMAILJS_PUBLIC_KEY ?? null;
-
-  return {
-    props: {
-      serviceId,
-      templateId,
-      publicKey,
-    },
-  };
-}
-
-export default Contact;
-// export const runtime = 'experimental-edge';
+export default ContactPage;

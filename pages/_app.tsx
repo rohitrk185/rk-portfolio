@@ -19,6 +19,18 @@ function App({ Component, pageProps }: AppProps) {
     <main className={`${poppins.variable} font-sans`}>
       <StarBackground />
       <AnimatePresence mode="wait">
+        {/* Favicon links */}
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
         <div key={router.pathname} className="">
           <Head>
             <meta charSet="utf-8" />
@@ -47,6 +59,13 @@ function App({ Component, pageProps }: AppProps) {
             <meta property="og:type" content="website" />
             {/* <meta property="og:url" content="" /> */}
             <meta property="og:image" content="/favicon.png" />
+            <link
+              rel="icon"
+              type="image/png"
+              sizes="16x16"
+              href="/favicon/favicon-16x16.png"
+            />
+            <link rel="manifest" href="/favicon/site.webmanifest" />
             <meta property="og:image:width" content="448" />
             <meta property="og:image:height" content="448" />
           </Head>

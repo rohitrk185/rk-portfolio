@@ -32,7 +32,7 @@ function EducationCard({
   location = "Atlanta, GA",
 }: EducationCardProps) {
   return (
-    <Fade triggerOnce>
+    <Fade>
       <div className="bg-white bg-opacity-[0.09] backdrop-blur-md rounded-xl shadow-md p-2 px-4 md:p-4 md:px-6 lg:p-6 mb-4 max-w-6xl mx-auto">
         <div className="flex items-center">
           <img

@@ -77,7 +77,7 @@ function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
                 className={`mx-4 text-lg text-center transition-fontSize duration-200 ease-in-out 
                             ${
                               router.pathname === item.href
-                                ? "bg-gradient-to-r from-sky-400 via-indigo-500 to-sky-600 bg-clip-text text-transparent text-2xl" // Active link style
+                                ? "bg-gradient-to-r from-indigo-500 via-blue-500 to-indigo-700 bg-clip-text text-transparent text-2xl" // Updated active link style
                                 : "text-neutral-100 hover:text-2xl hover:bg-gradient-to-r hover:from-sky-400 hover:via-blue-500 hover:to-indigo-600 hover:bg-clip-text hover:text-transparent" // Default and hover style
                             }`}
               >
@@ -89,7 +89,7 @@ function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
       </div>
       <div className="flex items-center ml-auto">
         <a
-          href="https://github.com/Kevin-Kwan"
+          href="https://github.com/rohitrk185"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 transition-transform ease-in-out duration-200 hover:scale-150 hover:text-blue-500"
@@ -97,7 +97,7 @@ function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
           <FaGithub className="h-6 w-6 text-neutral-50 hover:fill-[#3b82f6]" />
         </a>
         <a
-          href="https://www.linkedin.com/in/kevinkwan3"
+          href="https://www.linkedin.com/in/rohit-kumar-r-425b0521b"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 transition-transform ease-in-out duration-200 hover:scale-150 hover:text-blue-500 ml-4 mr-4"
@@ -107,7 +107,7 @@ function Navbar({ fixed = true, isMenuOpen, toggleMenu }: NavbarProps) {
       </div>
       <div className="hidden md:block items-center">
         <Link href="/contact">
-          <button className="bg-blue-500 hover:bg-indigo-500 text-neutral-100 font-bold py-2 px-4 rounded ml-auto hover:text-xl transition-fontSize ease-in-out duration-200">
+          <button className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-neutral-100 font-bold py-2 px-4 rounded ml-auto hover:text-xl hover:brightness-110 transition-all ease-in-out duration-200">
             Contact Me
           </button>
         </Link>

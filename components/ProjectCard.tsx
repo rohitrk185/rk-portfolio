@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ElementType } from "react";
 import Link from "next/link";
 import { FaGithub, FaGlobe } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
@@ -9,7 +9,7 @@ interface ProjectCardProps {
   githubLink?: string;
   demoLink?: string;
   demoText?: string;
-  Icon?: React.ComponentType<{ className?: string }>;
+  Icon?: React.ComponentType<{ className?: string }> | ElementType;
 }
 
 function ProjectCard({
@@ -22,22 +22,28 @@ function ProjectCard({
 }: ProjectCardProps) {
   const DefaultIcon = Icon || FaGlobe;
   return (
-    <div className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2 md:p-4">
-      <Fade triggerOnce>
-        <div className="bg-zinc-900 rounded-lg shadow-lg overflow-hidden h-full flex flex-col justify-between">
+    <div className="w-full flex justify-center">
+      {" "}
+      {/* This div will be a flex item in projects.tsx, centering the card content */}
+      <Fade className="w-full max-w-5xl">
+        {" "}
+        {/* Apply max-width to Fade to ensure it doesn't exceed */}
+        <div className="bg-white bg-opacity-[0.09] backdrop-blur-md rounded-lg shadow-md overflow-hidden h-full flex flex-col justify-between w-full p-2 px-3">
+          {" "}
+          {/* Actual card content with a max-width */}
           <div>
-            <h2 className="text-sm md:text-lg font-bold p-3 text-zinc-200">
+            <h2 className="text-base md:text-lg lg:text-xl xl:text-2xl font-bold p-3 text-neutral-50">
               {name}
             </h2>
             <hr />
-            <div className="p-3 text-zinc-200 text-xs md:text-sm">
+            <div className="p-3 text-neutral-200 text-xs md:text-sm lg:text-base xl:text-lg">
               {description}
             </div>
           </div>
-          <div className="pb-3 pl-3 pr-3 flex justify-between">
+          <div className="my-4 mx-3 flex justify-between">
             {githubLink && (
               <Link href={githubLink} rel="noopener noreferrer" target="_blank">
-                <div className="bg-slate-400 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded inline-flex items-center text-xs md:text-base">
+                <div className="bg-slate-400 hover:bg-gradient-to-r hover:from-blue-600 hover:via-blue-500 hover:to-blue-400 text-black hover:text-white font-bold py-2 px-4 rounded inline-flex items-center text-xs md:text-base transition-all duration-200 ease-in-out">
                   <FaGithub className="mr-2 text-sm md:text-base" />
                   <span>GitHub</span>
                 </div>
@@ -45,7 +51,7 @@ function ProjectCard({
             )}
             {demoLink && (
               <Link href={demoLink} rel="noopener noreferrer" target="_blank">
-                <div className="bg-slate-400 hover:bg-green-700 text-black font-bold py-2 px-4 rounded inline-flex items-center text-xs md:text-base">
+                <div className="bg-slate-400 hover:bg-gradient-to-r hover:from-green-600 hover:via-green-500 hover:to-emerald-400 text-black hover:text-white font-bold py-2 px-4 rounded inline-flex items-center text-xs md:text-base transition-all duration-200 ease-in-out">
                   <DefaultIcon className="mr-2 text-sm md:text-base" />
                   <span>{demoText}</span>
                 </div>

@@ -8,7 +8,7 @@ The portfolio includes various projects that I have worked on, demonstrating his
 
 ## Live Demo
 
-You can view the live demo of the website at [Rohit Kumar R's Portfolio](https://kevinkwan.tech).
+You can view the live demo of the website at [Rohit Kumar R's Portfolio](https://rohitrk.in).
 
 ## Installation and Running the Project
 
@@ -17,20 +17,19 @@ Follow these steps to install and run the project:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/Kevin-Kwan/portfolio.git
+   git clone https://github.com/rohitrk185/rk-portfolio.git
    ```
 2. Navigate into the project directory and install the dependencies:
    ```
    npm install
    ```
 3. Run the project:
-   `    npm run dev
-   `
+   `   npm run dev`
    The website should now be running on `localhost:3000`.
 
 ## Deployment
 
-I am currently using Cloudflare Pages to host and deploy my site, Vercel should also work fine.
+I am currently using vercel to host and deploy my site.
 
 ## Contributing
 

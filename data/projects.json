@@ -1,0 +1,48 @@
+{
+  "ongoing": [],
+  "completed": [
+    {
+      "id": "1",
+      "name": "Leetcode Clone",
+      "staticDescription": "A clean, fully functional clone of the LeetCode problem-solving platform using javascript. Built using Next.js, Firebase, CodeMirror, this project features dynamic navigation between coding problems, a live editor interface, basic problem categories, and visual feedback on code submissions. It mimics the real LeetCode experience—letting users read problem statements, write and test code, and get instant validation.",
+      "githubLink": "https://github.com/rohitrk185/leetcode-clone",
+      "demoLink": "https://leetcode-clone-93p4gqkra-rohitrk185s-projects.vercel.app",
+      "demoText": "Project Link",
+      "icons": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/394px-Nextjs-logo.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/New_Firebase_logo.svg/2560px-New_Firebase_logo.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tailwind_CSS_logo.svg/2560px-Tailwind_CSS_logo.svg.png"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Figma Clone using Liveblocks",
+      "staticDescription": "A lightweight replica inspired by Figma, built for the web. It centers on an intuitive canvas where users can place, move, resize, and edit elements like text box and other shapes like square, rectangle, and circle with drag-and-drop ease. It brings together React with modern state management and direct DOM manipulation to offer smooth, real-time layout interactions. Integrated real-time collaboration with LiveBlocks.io,Fabric.js and Next.js for seamless user interactions like adding comments and reactios to other user's creation.",
+      "githubLink": "https://github.com/rohitrk185/figma-clone",
+      "demoLink": "https://figma-clone-5yib2hqu8-rohitrk185s-projects.vercel.app",
+      "demoText": "Project Link",
+      "icons": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/394px-Nextjs-logo.svg.png",
+        "https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/247435/liveblocks-status.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tailwind_CSS_logo.svg/2560px-Tailwind_CSS_logo.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Photo Library using Cloudinary",
+      "staticDescription": "A Image Library with editing options like crop, resize, apply filters, ehance(like removing background, improve image quality) using AI using Cloudinary AI, collage creation etc... It's a personal cloud-based photo gallery. Users can upload images, view them in a responsive grid, and take advantage of fast-loading optimizations like lazy loading and CDN-delivered assets. Featuring a modern gallery interface with thumbnails, modals, and smooth animations.",
+      "githubLink": "https://github.com/rohitrk185/my-photo-library",
+      "icons": [
+        "https://admin.mridul.tech/wp-content/uploads/2023/02/react-js.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tailwind_CSS_logo.svg/2560px-Tailwind_CSS_logo.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Cloudinary_logo.svg/2560px-Cloudinary_logo.svg.png"
+      ],
+      "demoLink": "https://cloudinary-pic-7igq8xtsp-rohitrk185s-projects.vercel.app",
+      "demoText": "Project Link"
+    }
+  ],
+  "codingChallenges": []
+}

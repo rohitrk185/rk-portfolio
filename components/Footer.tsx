@@ -10,9 +10,12 @@ function Footer() {
         background: "linear-gradient(to right, #171F29, #3F4C6B, #171F29)",
       }}
     >
-      <div className="max-w-2xl mx-auto flex flex-col items-center">
-        <p className="text-neutral-200">&copy; {year}</p>
+      <div className="max-w-2xl mx-auto flex justify-center items-center gap-x-2">
+        <p className="text-neutral-200 text-center text-sm sm:text-base">
+          &copy; {year}
+        </p>
 
+        <p className="text-xl text-white">|</p>
         <p className="text-center text-sm sm:text-base text-neutral-200">
           <span className="">Made by</span>{" "}
           <span className="text-blue-300 hover:underline transition-colors ease-in-out hover:text-blue-500">

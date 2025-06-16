@@ -20,7 +20,7 @@ function TechLogo({
   return (
     <div className="flex flex-col items-center justify-center">
       <Link href={href} passHref rel="noopener noreferrer" target="_blank">
-        <Fade triggerOnce>
+        <Fade>
           <img src={src} alt={alt} width={width} height={height} />
         </Fade>
       </Link>

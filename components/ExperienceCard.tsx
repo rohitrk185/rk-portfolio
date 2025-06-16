@@ -29,7 +29,7 @@ function ExperienceCard({
   location = "Atlanta, GA",
 }: ExperienceCardProps) {
   return (
-    <Fade triggerOnce>
+    <Fade>
       <div className="bg-white bg-opacity-[0.09] backdrop-blur-md rounded-lg shadow-md p-4 mb-4 max-w-6xl mx-auto">
         <div className="flex items-center">
           <Image
