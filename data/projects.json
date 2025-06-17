@@ -13,7 +13,8 @@
         "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/New_Firebase_logo.svg/2560px-New_Firebase_logo.svg.png",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tailwind_CSS_logo.svg/2560px-Tailwind_CSS_logo.svg.png"
-      ]
+      ],
+      "previewImageUrl": "/project-previews/LeetCode-Clone.jpeg"
     },
     {
       "id": "2",
@@ -27,7 +28,8 @@
         "https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/247435/liveblocks-status.png",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tailwind_CSS_logo.svg/2560px-Tailwind_CSS_logo.svg.png",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png"
-      ]
+      ],
+      "previewImageUrl": "/project-previews/Figma-Clone.jpeg"
     },
     {
       "id": "3",
@@ -41,7 +43,8 @@
         "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Cloudinary_logo.svg/2560px-Cloudinary_logo.svg.png"
       ],
       "demoLink": "https://cloudinary-pic-7igq8xtsp-rohitrk185s-projects.vercel.app",
-      "demoText": "Project Link"
+      "demoText": "Project Link",
+      "previewImageUrl": "/project-previews/Cloudinary-Photos.jpeg"
     }
   ],
   "codingChallenges": []

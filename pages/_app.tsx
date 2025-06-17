@@ -19,20 +19,20 @@ function App({ Component, pageProps }: AppProps) {
     <main className={`${poppins.variable} font-sans`}>
       <StarBackground />
       <AnimatePresence mode="wait">
-        {/* Favicon links */}
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon/favicon-32x32.png"
-        />
         <div key={router.pathname} className="">
           <Head>
+            {/* Favicon links moved inside Head */}
+            <link
+              rel="apple-touch-icon"
+              sizes="180x180"
+              href="/favicon/apple-touch-icon.png"
+            />
+            <link
+              rel="icon"
+              type="image/png"
+              sizes="32x32"
+              href="/favicon/favicon-32x32.png"
+            />
             <meta charSet="utf-8" />
             <title>Rohit Kumar R | Software Engineering Portfolio</title>
             <meta

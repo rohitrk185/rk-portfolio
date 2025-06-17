@@ -10,6 +10,7 @@ interface ProjectCardProps {
   demoLink?: string;
   demoText?: string;
   Icon?: React.ComponentType<{ className?: string }> | ElementType;
+  previewImageUrl?: string;
 }
 
 function ProjectCard({
@@ -19,6 +20,7 @@ function ProjectCard({
   demoLink,
   demoText = "Demo",
   Icon = FaGlobe,
+  previewImageUrl,
 }: ProjectCardProps) {
   const DefaultIcon = Icon || FaGlobe;
   return (
@@ -31,12 +33,26 @@ function ProjectCard({
         <div className="bg-white bg-opacity-[0.09] backdrop-blur-md rounded-lg shadow-md overflow-hidden h-full flex flex-col justify-between w-full p-2 px-3">
           {" "}
           {/* Actual card content with a max-width */}
+          {previewImageUrl && (
+            <a
+              target="_blank"
+              href={demoLink}
+              rel="noopener noreferrer"
+              className="w-11/12 h-60 lg:w-2/3 lg:h-96 rounded-2xl mb-3 mx-auto"
+            >
+              <img
+                src={previewImageUrl}
+                alt={`${name} preview`}
+                className="w-full h-full object-fill rounded-2xl "
+              />
+            </a>
+          )}
           <div>
-            <h2 className="text-base md:text-lg lg:text-xl xl:text-2xl font-bold p-3 text-neutral-50">
+            <h2 className="text-lg md:text-xl font-bold p-3 text-neutral-50">
               {name}
             </h2>
             <hr />
-            <div className="p-3 text-neutral-200 text-xs md:text-sm lg:text-base xl:text-lg">
+            <div className="p-3 text-neutral-200 text-sm md:text-base">
               {description}
             </div>
           </div>

@@ -64,6 +64,7 @@ function Projects({ descriptions }: ProjectsProps) {
         githubLink={project.githubLink}
         demoLink={project.demoLink}
         demoText={project.demoText}
+        previewImageUrl={project.previewImageUrl}
         Icon={IconComponent}
       />
     );
@@ -74,12 +75,14 @@ function Projects({ descriptions }: ProjectsProps) {
       <Head>
         <title>Rohit Kumar R | My Projects</title>
       </Head>
+
       <main className="flex-1 p-4 mb-20" style={{ paddingTop: "5rem" }}>
         <div className="max-w-6xl mx-auto">
-          <h1 className="mt-8 mb-4 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-center bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+          <h1 className="mt-8 mb-4 text-3xl sm:text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
             My Projects
           </h1>
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-1xl text-neutral-200 mt-3 mb-8 text-center">
+
+          <p className="text-neutral-300 text-lg md:text-xl mt-3 mb-12 text-center">
             Here, you&apos;ll find a curated list of projects I&apos;ve worked
             on, showcasing my skills in various technologies and my passion for
             building innovative solutions.
@@ -87,7 +90,7 @@ function Projects({ descriptions }: ProjectsProps) {
 
           {projectsData.ongoing.length > 0 ? (
             <section>
-              <h2 className="text-2xl font-bold mb-4 text-center text-green-300 underline">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-green-300 underline">
                 Ongoing Projects
               </h2>
               <div className="flex flex-col items-center gap-8 p-4">
@@ -109,7 +112,7 @@ function Projects({ descriptions }: ProjectsProps) {
 
           {projectsData.codingChallenges.length > 0 ? (
             <section className="mt-12">
-              <h2 className="text-2xl font-bold mb-4 text-center text-purple-300 underline">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-purple-300 underline">
                 Coding Challenge Solutions
               </h2>
               <div className="flex flex-col items-center gap-8 p-4">
