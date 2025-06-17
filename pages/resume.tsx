@@ -16,54 +16,69 @@ interface ResumeProps {
 function Resume({ adobeClientId }: ResumeProps) {
   const isMobile = useMediaQuery({ query: "(max-width: 846px)" });
   useEffect(() => {
-    function initializeAdobeDCView() {
-      var adobeDCView = new window.AdobeDC.View({
-        clientId: adobeClientId,
-        divId: "adobe-dc-view",
-      });
-      adobeDCView.previewFile(
-        {
-          content: {
-            location: {
-              url: process.env.NEXT_PUBLIC_RESUME_LINK,
-            },
-          },
-          metaData: { fileName: "Rohit_Kumar_R.pdf" },
-        },
-        {
-          embedMode: "FULL_WINDOW",
-          defaultViewMode: "FIT_WIDTH",
-          showFullScreen: true,
-          showAnnotationTools: false,
-          showZoomControl: true,
-          focusOnRendering: true,
-          showDownloadPDF: true,
+    const initializeViewer = () => {
+      if (isMobile || !adobeClientId) return; // Don't initialize if mobile, or no client ID
+
+      // Ensure AdobeDC.View is available
+      if (window.AdobeDC && window.AdobeDC.View) {
+        const adobeDiv = document.getElementById("adobe-dc-view");
+        // Prevent re-initialization if the div already has content from the viewer
+        if (adobeDiv && adobeDiv.childElementCount > 0) {
+          // console.log("Adobe DC View already initialized in this div.");
+          return;
         }
-      );
-    }
 
-    function loadViewerScript() {
-      if (window.AdobeDC?.View) {
-        setTimeout(initializeAdobeDCView, 100); // Delay the call to ensure the SDK is loaded
-      } else {
-        var viewerScript = document.createElement("script");
-        viewerScript.src =
-          "https://acrobatservices.adobe.com/view-sdk/viewer.js";
-        viewerScript.onload = function () {
-          setTimeout(initializeAdobeDCView, 100); // Delay the call to ensure the SDK is loaded
-        };
-        document.body.appendChild(viewerScript);
+        try {
+          const adobeDCView = new window.AdobeDC.View({
+            clientId: adobeClientId,
+            divId: "adobe-dc-view",
+          });
+          adobeDCView.previewFile(
+            {
+              content: {
+                location: {
+                  url: process.env.NEXT_PUBLIC_RESUME_LINK,
+                },
+              },
+              metaData: { fileName: "Rohit_Kumar_R.pdf" },
+            },
+            {
+              embedMode: "FULL_WINDOW",
+              defaultViewMode: "FIT_WIDTH",
+              showFullScreen: true,
+              showAnnotationTools: false, // Keep false to avoid potential licensing/feature issues
+              showZoomControl: true,
+              showDownloadPDF: true,
+            }
+          );
+        } catch (error) {
+          console.error("Error initializing Adobe DC View:", error);
+        }
       }
-    }
+    };
 
-    loadViewerScript();
+    // Listen for the SDK ready event
+    document.addEventListener("adobe_dc_view_sdk.ready", initializeViewer);
+
+    // If SDK is already loaded and ready (e.g. from a previous page navigation or HMR)
+    if (window.AdobeDC && window.AdobeDC.View) {
+      initializeViewer();
+    } else if (
+      !document.querySelector(
+        'script[src="https://acrobatservices.adobe.com/view-sdk/viewer.js"]'
+      )
+    ) {
+      // If the script isn't on the page, add it.
+      const viewerScript = document.createElement("script");
+      viewerScript.src = "https://acrobatservices.adobe.com/view-sdk/viewer.js";
+      document.body.appendChild(viewerScript);
+    }
+    // If the script tag exists but AdobeDC.View is not yet ready, the event listener will handle initialization.
 
     return () => {
-      window.AdobeDC = undefined;
-      window.adobe_dc_sdk = undefined;
-      window.adobe_dc_view_sdk = undefined;
+      document.removeEventListener("adobe_dc_view_sdk.ready", initializeViewer);
     };
-  }, [adobeClientId]);
+  }, [adobeClientId, isMobile]);
 
   return (
     <div>
