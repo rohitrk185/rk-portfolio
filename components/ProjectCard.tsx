@@ -38,12 +38,12 @@ function ProjectCard({
               target="_blank"
               href={demoLink}
               rel="noopener noreferrer"
-              className="w-11/12 h-60 lg:w-2/3 lg:h-96 rounded-2xl mb-3 mx-auto"
+              className="w-11/12 h-60 lg:w-2/3 lg:h-96 rounded-2xl mb-3 mx-auto group"
             >
               <img
                 src={previewImageUrl}
                 alt={`${name} preview`}
-                className="w-full h-full object-fill rounded-2xl "
+                className="w-full h-full object-fill rounded-2xl transition-transform duration-300 ease-in-out group-hover:scale-105"
               />
             </a>
           )}

@@ -44,34 +44,25 @@ function EducationCard({
           />
 
           <div>
-            <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white">
+            <h3 className="text-lg md:text-xl font-bold text-white">
               {schoolName}
               {subschoolDescription && (
-                <>
-                  {" "}
-                  <span className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200">
-                    |
-                  </span>{" "}
-                  <span className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">
-                    {subschoolDescription}
-                  </span>
-                </>
+                <span className="text-gray-400">
+                  {" | "}
+                  {subschoolDescription}
+                </span>
               )}
             </h3>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300">
-              {location}
-            </p>{" "}
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-400">
-              {dateRange}
-            </p>
+            <p className="text-sm md:text-base text-gray-300">{location}</p>{" "}
+            <p className="text-sm md:text-base text-gray-400">{dateRange}</p>
             {links.map((link, index) => (
               <React.Fragment key={link.url}>
                 <a
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-xs sm:text-sm md:text-base lg:text-lg text-blue-500 underline ${
-                    index !== 0 ? "ml-3" : ""
+                  className={`text-sm md:text-base text-blue-400 hover:text-blue-300 underline transition-colors duration-200 ${
+                    index > 0 ? "ml-4" : ""
                   }`}
                 >
                   {link.displayText}
@@ -80,13 +71,13 @@ function EducationCard({
             ))}
           </div>
         </div>
-        <h4 className="mt-1 text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white">
+        <h4 className="mt-3 mb-1 text-base md:text-lg font-semibold text-white">
           {credential}
         </h4>
-        <div className="mt-1 text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">
+        <div className="text-sm md:text-base text-gray-300">
           {eduDescription}
         </div>
-        <div className="mt-1 text-sm sm:text-base md:text-lg lg:text-xl text-gray-400">
+        <div className="mt-2 text-sm md:text-base text-gray-300">
           {typeof gpa === "string" ? (
             <>
               <b> GPA: </b> {gpa}

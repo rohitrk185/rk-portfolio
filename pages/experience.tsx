@@ -10,11 +10,11 @@ function Experience() {
       </Head>
       <main className="flex-1 p-4 mb-20" style={{ paddingTop: "5rem" }}>
         <div className="max-w-6xl mx-auto">
-          <h1 className="mt-8 mb-4 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-center bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
-            My Work Experience
+          <h1 className="my-8 mb-4 text-3xl sm:text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+            Work Experience
           </h1>
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-1xl text-neutral-200 mt-3 mb-8">
-            Here, you&apos;ll find a list of software engineering positions
+          <p className="text-neutral-300 text-lg md:text-xl mt-3 mb-8 text-center">
+            Explore my work history, highlighting software engineering roles
             I&apos;ve held, the companies I&apos;ve worked for, the projects
             that I worked on, some of the responsibilities I had, and what I
             learned.

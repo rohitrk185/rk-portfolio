@@ -10,10 +10,10 @@ function Education() {
       </Head>
       <main className="flex-1 p-4 mb-20" style={{ paddingTop: "5rem" }}>
         <div className="max-w-4xl mx-auto">
-          <p className="sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold mb-2 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent text-center underline">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent text-center">
             My Education
-          </p>
-          <p className="mt-3 mb-8 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-1xl text-neutral-200 text-center">
+          </h1>
+          <p className="text-neutral-300 text-lg md:text-xl mt-3 mb-12 text-center">
             Here, you&apos;ll find a list of my educational experiences,
             associations, activities/societies, and awards/achievements.
           </p>
