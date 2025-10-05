@@ -82,11 +82,11 @@ function Projects({ descriptions }: ProjectsProps) {
             My Projects
           </h1>
 
-          <p className="text-neutral-300 text-lg md:text-xl mt-3 mb-12 text-center">
+          {/* <p className="text-neutral-300 text-lg md:text-xl mt-3 mb-12 text-center">
             Here, you&apos;ll find a curated list of projects I&apos;ve worked
             on, showcasing my skills in various technologies and my passion for
             building innovative solutions.
-          </p>
+          </p> */}
 
           {projectsData.ongoing.length > 0 ? (
             <section>

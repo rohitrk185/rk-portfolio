@@ -1,7 +1,14 @@
 [
   {
-    "companyName": "MyLang",
+    "companyName": "MyLang/Qiwi/Nodu",
     "subCompanyDescription": "Tech - Online Media & Audio",
+    "dateRange": "June 2023 - Present",
+    "jobTitle": "Software Developer",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/C560BAQHOVH0zRl3CYA/company-logo_200_200/company-logo_200_200/0/1668584336342/mylang_logo?e=2147483647&v=beta&t=Wc5nrUUhqsOBhdo-yOwU_BhcJlzzjfHwomuysiTH_jY",
+    "jobDescription": "<ul style='list-style-type:disc; margin-left: 1rem;margin-top: .8rem;'><li>Architected and deployed a <b><u>scalable AI audio production backend</u></b> using Python (Flask), Docker, and Google Cloud Run; integrated OpenAI, ElevenLabs, and Google TTS APIs to automate narration and content generation. <i style='opacity:0.6;'>(Qiwi/Nodu)</i></li><li>Developed a streamlined internal tool with <b>React</b>, Tailwind, and <b>Firebase</b>, reducing AI audiobook production time by over 50% and significantly improving content creation workflows. <i style='opacity:0.6;'>(Qiwi/Nodu)</i></li><li>Engineered an innovative <b><u>AI-powered video editing interface</u></b> using React and Flask that translates natural language prompts into actionable video modifications, leveraging image and video generation models in fal.ai. <i style='opacity:0.6;'>(Qiwi/Nodu)</i></li><li>Implemented a complete payment system using <b><u>Stripe and React.js</u></b> to handle one-time credit purchases and introduce <b><u>subscription plans</u></b> for the AI video platform. <i style='opacity:0.6;'>(Qiwi/Nodu)</i></li><li>Engineered a comprehensive manual story creation and audio editing platform using <b><u>Next.js and WebAudio APIs</u></b>, enabling over 10,000 users to create and narrate stories. <i style='opacity:0.6;'>(MyLang)</i></li><li>Developed a <b><u>scalable backend audio processing pipeline</u></b> using <b>AWS Lambda</b>, <b>Firebase Cloud Functions</b> to automatically mix audio segments, suppress noise, and compress files into a final, high-quality track. This pipeline integrates with DRM vendors for content encryption and saving them to <b><u>S3</u></b>. <i style='opacity:0.6;'>(MyLang)</i></li><li>Engineered an <b><u>advanced audio layering system</u></b> using the <b><u>WebAudio API</u></b> to dynamically mix narration with background music and sound effects, featuring automated gain and fade controls. <i style='opacity:0.6;'>(MyLang)</i></li><li>Designed a <b><u>comprehensive monetization platform</u></b>, integrating the <b><u>Cashfree payment gateway</u></b> to enable premium content access through a digital coin system and drive revenue growth. <i style='opacity:0.6;'>(MyLang)</i></li></ul>"
+  },
+  {
+    "companyName": "MyLang",
     "dateRange": "June 2023 - Present",
     "jobTitle": "Software Developer",
     "logoUrl": "https://media.licdn.com/dms/image/v2/C560BAQHOVH0zRl3CYA/company-logo_200_200/company-logo_200_200/0/1668584336342/mylang_logo?e=2147483647&v=beta&t=Wc5nrUUhqsOBhdo-yOwU_BhcJlzzjfHwomuysiTH_jY",
@@ -12,14 +19,5 @@
         "displayText": "Company Website"
       }
     ]
-  },
-  {
-    "companyName": "MyLang",
-    "subCompanyDescription": "Tech - Online Media & Audio",
-    "dateRange": "January 2023 - June 2023",
-    "jobTitle": "Frontend Developer Intern",
-    "logoUrl": "https://media.licdn.com/dms/image/v2/C560BAQHOVH0zRl3CYA/company-logo_200_200/company-logo_200_200/0/1668584336342/mylang_logo?e=2147483647&v=beta&t=Wc5nrUUhqsOBhdo-yOwU_BhcJlzzjfHwomuysiTH_jY",
-    "jobDescription": "<ul style='list-style-type:disc; margin-left: 1rem;margin-top: .8rem;'><li>Worked on Audio Stories Web App built using Next JS, Firebase, Tailwind CSS. Implemented multilingual support using Next.js i18n, enabling accessibility in English, Hindi, and Kannada, expanding the user base by 30%.</li><li style='margin-top: .5rem;'>Delivered multiple feature enhancements and resolved critical bugs, maintaining high standards of code quality through rigorous testing and peer reviews.</li></ul>",
-    "links": []
   }
 ]

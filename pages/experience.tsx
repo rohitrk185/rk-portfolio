@@ -13,18 +13,18 @@ function Experience() {
           <h1 className="my-8 mb-4 text-3xl sm:text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
             Work Experience
           </h1>
-          <p className="text-neutral-300 text-lg md:text-xl mt-3 mb-8 text-center">
+          {/* <p className="text-neutral-300 text-lg md:text-xl mt-3 mb-8 text-center">
             Explore my work history, highlighting software engineering roles
             I&apos;ve held, the companies I&apos;ve worked for, the projects
             that I worked on, some of the responsibilities I had, and what I
             learned.
-          </p>
+          </p> */}
           <div className="flex flex-col gap-8 my-12">
             {experienceData.map((exp, index) => (
               <ExperienceCard
                 key={index}
                 companyName={exp.companyName}
-                subCompanyDescription={exp.subCompanyDescription}
+                subCompanyDescription={exp.subCompanyDescription || ""}
                 dateRange={exp.dateRange}
                 jobTitle={exp.jobTitle}
                 logoUrl={exp.logoUrl}
@@ -33,7 +33,7 @@ function Experience() {
                     dangerouslySetInnerHTML={{ __html: exp.jobDescription }}
                   />
                 }
-                links={exp.links}
+                links={exp.links || []}
               />
             ))}
           </div>

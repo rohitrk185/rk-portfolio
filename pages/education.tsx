@@ -13,10 +13,10 @@ function Education() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent text-center">
             My Education
           </h1>
-          <p className="text-neutral-300 text-lg md:text-xl mt-3 mb-12 text-center">
+          {/* <p className="text-neutral-300 text-lg md:text-xl mt-3 mb-12 text-center">
             Here, you&apos;ll find a list of my educational experiences,
             associations, activities/societies, and awards/achievements.
-          </p>
+          </p> */}
 
           <div className="flex flex-col gap-8 mt-4">
             {educationData.map((edu, index) => (

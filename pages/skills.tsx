@@ -15,13 +15,13 @@ function Skills() {
             My Skills
           </h1>
 
-          <p className="text-neutral-300 text-lg md:text-xl mt-3 mb-12 text-center">
+          {/* <p className="text-neutral-300 text-lg md:text-xl mt-3 mb-12 text-center">
             Here, you&apos;ll find a comprehensive and ever-growing list of the
             technologies I&apos;ve worked with and used in my projects and my
             professional work. My experience spans across various domains,
             whether it&apos;s front-end or back-end development, databases, or
             deployment.
-          </p>
+          </p> */}
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-8 mt-3 bg-[#ccddff] bg-opacity-90 rounded-lg p-8 shadow-lg shadow-neutral-100">
             {skillsData.map((skill) => (
               <TechLogo
