@@ -13,7 +13,7 @@
     "@heroicons/react": "^2.2.0",
     "@sentry/nextjs": "^9.30.0",
     "@tsparticles/react": "^3.0.0",
-    "@types/node": "22.15.21",
+    "@types/node": "24.0.3",
     "@types/react-dom": "^18.2.0",
     "autoprefixer": "10.4.21",
     "compass-mixins": "^0.12.12",
